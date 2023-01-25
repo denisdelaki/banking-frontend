@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 function ViewBalance() {
   const [account, setAccount] = useState('');
   const [balance, setBalance] = useState(0);
@@ -22,6 +22,7 @@ function ViewBalance() {
 
        {/* <Link to="/transaction">Make a Transaction</Link> */}
       {/* <Link to="/viewhistory">View History</Link> */} 
+      <p>My Bank balance in KSH.</p>
       <form>
       <label>
         Account:
@@ -38,6 +39,7 @@ function ViewBalance() {
         Balance: {balance}
       </label>
     </form>
+    <Link to='/' class='back'>Back</Link>
     </div>
    
   );

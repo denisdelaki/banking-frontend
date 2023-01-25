@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './style.css'
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 function Transaction() {
   const [fromAccount, setFromAccount] = useState('');
   const [toAccount, setToAccount] = useState('');
@@ -38,11 +38,13 @@ function Transaction() {
 
   return (
     <div>
-      <h2>E$M Tech Bank</h2>
-      <h5>Customer Name: Ian Technologies </h5>
       <p>Time of transaction: </p>
       {/* <Link to="/viewbalance">View Balance</Link>
       <Link to="/viewhistory">View History</Link> */}
+      <div>
+        <Link to='/balance'>View Balance </Link>
+        <Link to='/history'>Transaction History</Link>
+      </div>
     <form onSubmit={handleSubmit}>
       <label>
         From Account:
