@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 function ViewHistory() {
   const [account, setAccount] = useState('');
   const [transactions, setTransactions] = useState([]);
@@ -44,6 +44,7 @@ return (
     </ul>
 </label>
 </form>
+<Link to='/' class='back'>Back</Link>
 </div>
 
 );
